@@ -10,8 +10,8 @@ const MovieListing = () => {
   const movies = useSelector(getAllmovies);
   const shows = useSelector(getAllshows);
   
-const [movie,setmovie]=useState(" ")
-const [series,setseries]=useState(" ")
+const [movie,setmovie]=useState("")
+const [series,setseries]=useState("")
 
   let renderMovies,renderShows=""
   const dispatch=useDispatch();
@@ -47,7 +47,7 @@ const [series,setseries]=useState(" ")
       e.preventDefault();
       console.log(series)
       dispatch(changeSeriesName(series))
-      setseries("")
+      setseries()
 
      }
  
